@@ -11,13 +11,23 @@ package sudoku;
  */
 public class Grafo {
     int [][]aresta;
-    Vertice []tabela;
+    Vertice [][]tabela;
+    int lin,col;
     
     Grafo(String linha){
         aresta = new int[21][9];
-        tabela = new Vertice[21];
-        for(int i=0;i<21;i++){
-            tabela[i] = new Vertice(i,21,linha.charAt(i));
+        tabela = new Vertice[9][9];
+        int k=0;
+        for(int i=0;i<9;i++){
+        	for(int j=0;j<9;j++)
+        		tabela[i][j] = new Vertice(i,9,linha.charAt(k++));
+        }
+    }
+    void printGrafo(){
+    	for(int i=0;i<9;i++){
+    		for(int j=0;j<9;j++)
+    			System.out.print(tabela[i][j].cor+" ");
+            System.out.println();
         }
     }
 }

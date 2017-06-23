@@ -19,8 +19,12 @@ public class Tpgrafos {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        String linha = leArquivo.leitor("sudoku.txt");
+        String linha = new String();
+        linha = leArquivo.leitor("sudoku.txt");
+        
+        System.out.println(linha);
         Grafo tabela = new Grafo(linha);
+        tabela.printGrafo();
     }
     
 }

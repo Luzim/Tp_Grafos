@@ -10,13 +10,26 @@ package sudoku;
  * @author Igor
  */
 public class Vertice {
-    int[]cor;
+    int[]cores;
+    public int cor;
+    Vertice(){}
     Vertice(int index,int tam, char valor){
-        cor =new int[15];
+        tam+=5;
+    	cores =new int[tam];
+        
         for(int i=0;i<tam;++i){
-            if(valor==0){
-                
-            }
+            cores[i] = 0;
+        	cor=0;            
+        }
+        if(valor=='0'){
+	        for(int i=0;i<tam;++i){
+	            cores[i] = 1;
+	        }
+	        cor = 0;
+        }
+        else{
+        	cores[Character.getNumericValue(valor)]=Character.getNumericValue(valor);
+        	cor = Character.getNumericValue(valor);
         }
     }
 }
