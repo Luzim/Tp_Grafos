@@ -24,6 +24,7 @@ public class Tpgrafos {
         
         System.out.println(linha);
         Grafo tabela = new Grafo(linha);
+        tabela.criaAresta();
         tabela.printGrafo();
     }
     

@@ -12,9 +12,11 @@ package sudoku;
 public class Vertice {
     int[]cores;
     public int cor;
+    int[]arestas;
     Vertice(){}
     Vertice(int index,int tam, char valor){
-        tam+=5;
+        arestas=new int[3];
+    	tam+=5;
     	cores =new int[tam];
         
         for(int i=0;i<tam;++i){
@@ -28,8 +30,9 @@ public class Vertice {
 	        cor = 0;
         }
         else{
-        	cores[Character.getNumericValue(valor)]=Character.getNumericValue(valor);
+        	cores[Character.getNumericValue(valor)-1]=Character.getNumericValue(valor);
         	cor = Character.getNumericValue(valor);
         }
     }
+    
 }
