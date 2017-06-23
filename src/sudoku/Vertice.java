@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tpgrafos;
+package sudoku;
 
 /**
  *
@@ -11,9 +11,12 @@ package tpgrafos;
  */
 public class Vertice {
     int[]cor;
-    Vertice(int tam){
+    Vertice(int index,int tam, char valor){
+        cor =new int[15];
         for(int i=0;i<tam;++i){
-            
+            if(valor==0){
+                
+            }
         }
     }
 }
